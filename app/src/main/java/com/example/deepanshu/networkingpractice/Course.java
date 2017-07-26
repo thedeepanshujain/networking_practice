@@ -1,17 +1,19 @@
 package com.example.deepanshu.networkingpractice;
 
+import java.io.Serializable;
+
 /**
  * Created by deepanshu on 26/7/17.
  */
 
-public class Course {
+public class Course implements Serializable {
 
     private int mId;
     private String mTitle;
     private String mName;
     private boolean mIsActive;
     private String mOverview;
-    private int mFeeWithTaxes;
+    private double mFeeWithTaxes;
 
     public Course(int id, String title, String name, boolean isActive, String overview, int feeWithTaxes) {
         this.mId = id;
@@ -22,51 +24,29 @@ public class Course {
         this.mFeeWithTaxes = feeWithTaxes;
     }
 
-    public int getId() {
-        return mId;
-    }
-
-    public void setId(int mId) {
-        this.mId = mId;
-    }
 
     public String getTitle() {
         return mTitle;
-    }
-
-    public void setTitle(String mTitle) {
-        this.mTitle = mTitle;
     }
 
     public String getName() {
         return mName;
     }
 
-    public void setName(String mName) {
-        this.mName = mName;
-    }
 
     public boolean isIsActive() {
         return mIsActive;
-    }
-
-    public void setIsActive(boolean mIsActive) {
-        this.mIsActive = mIsActive;
     }
 
     public String getOverview() {
         return mOverview;
     }
 
-    public void setOverview(String mOverview) {
-        this.mOverview = mOverview;
-    }
-
-    public int getFeeWithTaxes() {
+    public double getFeeWithTaxes() {
         return mFeeWithTaxes;
     }
 
-    public void setFeeWithTaxes(int mFeeWithTaxes) {
-        this.mFeeWithTaxes = mFeeWithTaxes;
+    public int getId() {
+        return mId;
     }
 }
